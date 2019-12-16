@@ -1,0 +1,359 @@
+{
+	"variables": [],
+	"info": {
+		"name": "TPFICO DigiTexx",
+		"_postman_id": "184d5838-d046-ec8c-1e53-4a3d5cd5ff44",
+		"description": "This is Interact API for TPFICO Digi-Texx",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "TPFICO Custom API - DigiTexx",
+			"description": "",
+			"item": [
+				{
+					"name": "Interact to Document API DigiTexx",
+					"request": {
+						"url": "https://effektif-connector-qa-global.digi-texx.vn/ConnectorService.svc/json/Interact/ec1a42bf-90df-4dfa-9998-0a82bfd9084b/documentAPI",
+						"method": "POST",
+						"header": [
+							{
+								"key": "authkey",
+								"value": "699f6095-7a8b-4741-9aa5-e976004cacbb",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "ACCA-Form",
+									"description": "",
+									"type": "file",
+									"src": "ACCA-Form_11111.pdf"
+								},
+								{
+									"key": "ID-Card",
+									"description": "",
+									"type": "file",
+									"src": "ID-Card_22222.pdf"
+								},
+								{
+									"key": "Household",
+									"description": "",
+									"type": "file",
+									"src": "Household_44444.pdf"
+								},
+								{
+									"key": "description",
+									"value": "{\"files\": [\n        {\n            \"file-name\": \"ACCA-Form_11111.pdf\",\n            \"md5\": \"59D9237D1471B04A8D95F3D066618E91\"\n        },\n        {\n            \"file-name\": \"ID-Card_22222.pdf\",\n            \"md5\": \"32788D1033C3EAB379D95AE264118D98\"\n        },\n        {\n            \"file-name\": \"Personal-Image_33333.pdf\",\n            \"md5\": \"B683455A6B34B0DC6E91AF035582682D\"\n        },\n\t{\n            \"file-name\": \"Household_44444.pdf\",\n            \"md5\": \"2292E11267A4F7D098FB205EB0E12C28\"\n        }\n]}",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "Personal-Image",
+									"description": "",
+									"type": "file",
+									"src": "Personal-Image_33333.pdf"
+								}
+							]
+						},
+						"description": "This interact posting to EU TPFICO Document API"
+					},
+					"response": []
+				},
+				{
+					"name": "TPFICO Custom API - Document API DigiTexx",
+					"request": {
+						"url": "https://tpfico-api.digi-texx.vn/api/CheckSum",
+						"method": "POST",
+						"header": [
+							{
+								"key": "authkey",
+								"value": "699f6095-7a8b-4741-9aa5-e976004cacbb",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "ACCA-Form",
+									"description": "",
+									"type": "file",
+									"src": "ACCA-Form_11111.pdf"
+								},
+								{
+									"key": "ID-Card",
+									"description": "",
+									"type": "file",
+									"src": "ID-Card_22222.pdf"
+								},
+								{
+									"key": "Household",
+									"description": "",
+									"type": "file",
+									"src": "Household_44444.pdf"
+								},
+								{
+									"key": "description",
+									"value": "{\"files\": [\n        {\n            \"file-name\": \"ACCA-Form_11111.pdf\",\n            \"md5\": \"59D9237D1471B04A8D95F3D066618E91\"\n        },\n        {\n            \"file-name\": \"ID-Card_22222.pdf\",\n            \"md5\": \"32788D1033C3EAB379D95AE264118D98\"\n        },\n        {\n            \"file-name\": \"Personal-Image_33333.pdf\",\n            \"md5\": \"B683455A6B34B0DC6E91AF035582682D\"\n        },\n\t{\n            \"file-name\": \"Household_44444.pdf\",\n            \"md5\": \"2292E11267A4F7D098FB205EB0E12C28\"\n        }\n]}",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "Personal-Image",
+									"description": "",
+									"type": "file",
+									"src": "Personal-Image_33333.pdf"
+								}
+							]
+						},
+						"description": "This interact posting to EU TPFICO Document API"
+					},
+					"response": []
+				},
+				{
+					"name": "TPFICO Custom API - Resubmit Document API DigiTexx",
+					"request": {
+						"url": "https://tpfico-api.digi-texx.vn/resubmit",
+						"method": "POST",
+						"header": [
+							{
+								"key": "authkey",
+								"value": "699f6095-7a8b-4741-9aa5-e976004cacbb",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "ACCA-Form",
+									"description": "",
+									"type": "file",
+									"src": "ACCA-Form_54321.pdf"
+								},
+								{
+									"key": "Personal-Image",
+									"description": "",
+									"type": "file",
+									"src": "Personal-Image_54321.pdf"
+								},
+								{
+									"key": "description",
+									"value": "{\"files\": [\n        {\n            \"file-name\": \"ACCA-Form_54321.pdf\",\n            \"md5\": \"59D9237D1471B04A8D95F3D066618E91\",\n\t    \"document-id\": \"2169213\"\n        },\n        {\n            \"file-name\": \"Personal-Image_54321.pdf\",\n            \"md5\": \"B683455A6B34B0DC6E91AF035582682D\",\n\t    \"document-id\": \"2169215\"\n        }\n]}",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": "This interact posting to EU TPFICO Document API"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Straatos API - The Rest",
+			"description": "Straatos API in DigiTexx environemtn for TPFICO\n- CMInfo API\n- Resubmit Comment API\n- Feedback API",
+			"item": [
+				{
+					"name": "TPFICO Custom API  Encrypt CMInfo JSON Body Digitexx",
+					"request": {
+						"url": "https://tpfico-api.azurewebsites.net/Encrypt",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "authKey",
+								"value": "232ace27-7c27-4826-a1e8-52c0ee920f65",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \r\n  \"RawText\": \"{\r\n \\\"customer-name\\\": \\\"Sam Wong\\\",\r\n    \\\"id-card-no\\\": \\\"02/02/2019\\\",\r\n    \\\"application-id\\\": \\\"Test201912121228\\\",\r\n    \\\"document-ids\\\": [\\\"277706\\\",\\\"277707\\\",\\\"277708\\\",\\\"277709\\\"]\r\n}\"\r\n\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "TPFICO Custom API Encrypt Feedback JSON Body Digitexx",
+					"request": {
+						"url": "http://tpfico-api.azurewebsites.net/Encrypt",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "authKey",
+								"value": "232ace27-7c27-4826-a1e8-52c0ee920f65",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \r\n  \"RawText\": \"{\r\n    \\\"application-id\\\": \\\"Test2019121123\\\",\r\n    \\\"status\\\": \\\"success\\\"\r\n}\r\n\"\r\n\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "TPFICO Custom API Encrypt Resubmit Comment JSON Body DigiTexx",
+					"request": {
+						"url": "http://tpfico-api.azurewebsites.net/Encrypt",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "authKey",
+								"value": "232ace27-7c27-4826-a1e8-52c0ee920f65",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \r\n  \"RawText\": \"{ \r\n\t\\\"application-id\\\": \\\"Test201912121252\\\",\r\n\t\\\"comment-id\\\": \\\"555555\\\",\r\n\t\\\"comment\\\": \\\"Testing of resubmit Comment API without resubmitDocumentAPI 555555\\\", \r\n\t\\\"documents\\\": [\r\n\t\t{\r\n        \\\"documentComment\\\": \\\"Issue1 for ACCA Form\\\",\r\n        \\\"documentId\\\": \\\"277730\\\"\r\n    },\r\n    {\r\n        \\\"documentComment\\\": \\\"Issue for Personal Imnage\\\",\r\n        \\\"documentId\\\": \\\"277731\\\"\r\n    }\r\n\t]\r\n}\"\r\n\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Straatos API CMInfo API DigiTexx-Encrypt",
+					"request": {
+						"url": "https://effektif-connector-qa-global.digi-texx.vn/ConnectorService.svc/json/Interact/ec1a42bf-90df-4dfa-9998-0a82bfd9084b/cmInfoAPI",
+						"method": "POST",
+						"header": [
+							{
+								"key": "authkey",
+								"value": "699f6095-7a8b-4741-9aa5-e976004cacbb",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "ⴭⴭ䈭䝅义倠假䴠卅䅓䕇ⴭⴭഭ嘊牥楳湯›䍂䝐䌠‣ㅶ㠮㔮〮਍਍全䵅㍁剄㉙氷ㄯ㉐允⽦獕獑㉥䔰䝮㥢䍉兹畕䱘䡨䥯䵎䍤䝹㑃呧癣乺橷潉瑬਍䠸娶攲晆䵬硕挹塍洶穳⭗㕧瀲桒㈴䑕欶睸ㅃ潥呥杶㡬湌䕧䕨瑐硘夫祦硊䩲਍獂灧㑪硈㕸䙙猸坯戯䍬摴䅣睵婹乃䅪焳㍳㕌伲浒眯潁甲㥶牫奣刴䐯橩潫䠫਍䡍浡⽸⽶䭄刵䑣摭票单煶刹䡱乪剃橏空卺㥲汨㙑捳硹㑷浡圳湯瑌敡く噫捏਍啋卖䅪琱祘嘸㥵搫摊潅啨䵫扅䠳ぴㅴ硇䱳䡊前㉮礳稹穨乪䡗䕂牋獲䴫䡣歵਍桬䍶桳䭶改摴浰䝰〳䄯㑍䍊呺湑摣穖兪䍧䩍ㅩ摲䅌䅹乆㕌匰㝪桵穥塌癴戱਍穚㍐穚奙桲䥈獓畊ㅳ煲卶兌䅮䍊婒含䵏㍋ㅏ塥潮䵊瑪䱶䉫捌敔䭊䅨䭏獃⬲਍㥓制牧ㅭ桵䨰䡙乒䉴慙㝊䅫别㜳橥癕慁奊乶㉰啐䍆橂煃㝩祗桶䅹䅙半砳汇਍灮䠫䍩煎慦礫塃㥱㜴灷啌⼴牌呎䌯䩣䝢㙌票䉐㝦䤲硪獬啄焱稸乪㑣灔儯奺਍䥳潄䔳䱲楧ㅳ偳汇祉発免䑳⭣瀷瑦畷䘸湎䥒湹楗䱘䙏瑖橁㡒乲瀲硥灂橁潄਍氶剤煏汏礹ㅱ坰⭔空浇㝃版㡵噅乮ㄴ佁共⭳潐瑴坬㜵䥊硧桖牊伹摥䙆㝱呥਍塚穄㙇攫畃㥈桹⭃䥢慌䅦噖㥙潆併䬰㙗䝂塩煑䍒敳桴㑩乗㐵祖⭩湴坚慌䑏਍瘰婸档㍹煢楎穮硰橩䥹瀳㍇晔啊剭㈱乁㕮婈啩晱乃䵳へ奬⼴卉䄰畣䡴偯琯਍卍㑈焷䕑䐴䵈倴祫䵱潎啢䅃桪呹晥瘲甴え䑍睺潒ど㕳歶噡湂㕖㕐਍戽湄൥ⴊⴭⴭ久⁄䝐⁐䕍卓䝁ⵅⴭⴭ਍"
+						},
+						"description": "This interact posting to EU TPFICO Document API"
+					},
+					"response": []
+				},
+				{
+					"name": "Straatos API Feedback  API DigiTexx - Encrypt",
+					"request": {
+						"url": "https://effektif-connector-qa-global.digi-texx.vn/ConnectorService.svc/json/Interact/ec1a42bf-90df-4dfa-9998-0a82bfd9084b/feedbackAPI",
+						"method": "POST",
+						"header": [
+							{
+								"key": "authkey",
+								"value": "699f6095-7a8b-4741-9aa5-e976004cacbb",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "ⴭⴭ䈭䝅义倠假䴠卅䅓䕇ⴭⴭഭ嘊牥楳湯›䍂䝐䌠‣ㅶ㠮㔮〮਍਍全䵅㍁剄㉙氷ㄯ㉐允⽦桢癩塭啣塹其橬灦敩䡅昲灃剷娳乡游䙭橬敔偸䅳䈶਍䑖瀷噒穈硏扬㉄⭹瑯㥢楶煕䍕夰畍潩佷䡪⭣塣䜱灧㕅䐴⽶浚ば婳䝡丯㤱㕰਍潍祬慂䉚佦⼵⭸㔯欰ㅳ湍㉉戵朵乐䭴啨⭧坓潡浵佮㙊乥扑㠱偎卨潮慤䴲煃਍䥈䙊慃㉕呵㑔晧扲䅦䩘䕰橘䙐制扅娸⭬塰十䤲⽦嘰㡊㍴䭡奁愱㝧㍡䡗塸扸਍汷扃浗地䑚㕦歡䑧䭏ぢ䵚圫呃啡噶椲硬へ䤲捎瑫䭣漴ㅃ䩰⽙䬯嘵湕浒㕅䄲਍汷䝷瑒䔴䑅㡫牘䍧䴰䅆偑ㅁ潨䑩㝸卋敷晍橐卸㥶䅌睁䉇佡䑪㥫㑲楚䝲䵁䑕਍圲癏元奐塺眱婦啗捚㙭䅦穴塌扲歱歊坄倵穯桡㥦煭佁浶癄剓捓⭒啬渷敂癳਍朵潇歧噯瑸摨扖捎猰樰䝵㉃䘫偹ㅶ剌捆晢橕塐漶䈷摖捍慯氶漵祯䅑扭奈祷਍畓景䅨晰卄䅄㠶瑍乓噣㡬㝃瘯協ㅵ啥㉅免癱㑳啪⭖敔呢呑㉔坡圴硉汗奶卫਍㈹瑉睺䄸〳䤲⽃敩㙗杏歯㐯ど桢䥴㝍煬乵余㕵⼹䅅昶扃先㴽਍眽䐸൫ⴊⴭⴭ久⁄䝐⁐䕍卓䝁ⵅⴭⴭ਍"
+						},
+						"description": "This interact posting to EU TPFICO Document API"
+					},
+					"response": []
+				},
+				{
+					"name": "Straatos API ResubmitComment API DigiTexx -Encrypt",
+					"request": {
+						"url": "https://effektif-connector-qa-global.digi-texx.vn/ConnectorService.svc/json/Interact/ec1a42bf-90df-4dfa-9998-0a82bfd9084b/resubmitCommentAPI",
+						"method": "POST",
+						"header": [
+							{
+								"key": "authkey",
+								"value": "699f6095-7a8b-4741-9aa5-e976004cacbb",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "ⴭⴭ䈭䝅义倠假䴠卅䅓䕇ⴭⴭഭ嘊牥楳湯›䍂䝐䌠‣ㅶ㠮㔮〮਍਍全䵅㍁剄㉙氷ㄯ㉐允㥦䝆噎䍘橏㡈䉡偄婂䉒硉祎䩊䡍朰慇坅剎䍐潡䑓儱㜸਍䜶汳㙣㝐啯桘杭時⽏癶䭋橹畋㡹楊ㅑ䝗楷䝪䔹敇㍢䙍捉瘹ㅗ䍷噃摋启噬獮਍啚扪⭕偶杳ぎ杍㝑佣楓瘯昶畴歉㑘剨琷䵬䵰䡒歍牒全㡋潶䅃浃䵶杈䱱摩則਍樯捣䥷䕪䝦祊牡㑔㕭㉢癩娯䥨䍁㙩䵐晣漷獊奫塂䵸呋䝤牪癆癊䰷䕚䵮猫當਍㙘瑣佺桑䉯橲戴䩒湵⭅琶汱䵳汳ひ留婓慓䩋畋硔摪䅏㝳奁㍩灨䝉乩〶䡮慧਍䙺ㅯ䅕㉌䌰㑭呋ㅄ睄摶兎匱瘴硁瀷䙓䵏啚共敶乵䍌䅚婆協桲癖灌潆浂潑䕬਍晚敍〫潊䭡奇䨷慤䵵⽴啇攰㑅䱗㉣睳䱆卄牺婍䍓湆䕍桳㐹㝣䕴畘積㥒礹䵁਍䅧㡥伯浏坃晣䥋慶祱桙㘱搸㑓浍奃硦䅴楄ㅰ焫䍺㙧䭥橋焱獬䩉瀵捲此杅佣਍㑱䭔獬捥煹䡖㑂䡄䕯㝡杯㑁獢⭇㥗䑌䕡䥲䰹男摃慈硬㤲橹楷浔䬷䝘䴴䭕⽃਍湨晷䱚坳䩌塯搸塋噰ざ祢潚眳䬴匶捘癐畂䙰䨷契橭㙸婌䕣ㅱ倲朹硳㕶⬸瑩਍桊扰楫瑔督摨䕖ㅷ祕畍䕑奴效歺䭴稴牫偙㡓敘浳奂兘䉂䄵䅱㉆楕畡⭐㡓睢਍散灏猰奺浮呴硹䍭椷㥢敉扯䭋浇晕渵䘸慬久乗㕏瑎㑩䕉佃煏搯坎牡欳䕁灐਍䴲敡䝩㥇灇桷ㅈ灨晬桗栱慙㠰啕父打穅⭴䕱穬眷⽬ㅹ⼹睢㉎㈴呈填睯䭲娱਍䈷獡欳㙈慬䵌䵭㘴㡮⬹䜫卥楢捆潸ぴ卒头欷⽤呅浨癲牋砯㈸䝖橉䅇䩨䙡ㅖ਍呺㍭㕲塤䡗穩䍢硣周䥡䥆奪橘即兏兴潣杣㈹昴祘呅圴䙵敲潷啃浇䥤坑倳爰਍䭯牘佌伶畵坤䍴六嘫䑆歏㡂坖䄲㕌坪⭏捈䅃癹奢硏祙䑅楒煤⭱敵捦捺娳㡧਍灂剺䔲䵹券か⽘奯ㄫ䕯灭捔杋䙅䬸䱤奮偍奏坉浥㥫㈱畦ど㕸䅑祸䅫琶㘴䥰਍祈䝙㕶浶渹坒煭噯欴湆祬浶䡵癰潧瑨㍣乔䡦卲慢礷噇堰佴穯䙺单祳⽶婫㙂਍坧䭹扌嘳䈹朶㍑儲摯㡬㐴䨲䰫䄳䭌祚慕䱁㍏框瑙祺ぬ畢伱偍塦礯䅚䉘䑗慖਍浰执䍰祕ㅴ䡂⽷䵊湖元硗䜳獖偗瀰啐癁䴹潪吱档楁奸⽮䝎桓㙘煦䕌慏䈶琵਍㕊扗慷畗畊琫契啇塍癪午刷䑢佱何湸佅㡒湃⼴唷㠱㑤䑬娳䍺硯伲穭癘啐䥵਍䴵牃䄵ㅢ特䅯晢㉚浶佅㥲啉ち噘偐ㄱ歕䕁䉸㙵瑉瘶⭮啃兖䉳⭎估㉒呲䱐㥹਍搶桏搰楫杔煔䅪㝉杖䰲杴㍷摷㌯兏㴽਍㔽汸൥ⴊⴭⴭ久⁄䝐⁐䕍卓䝁ⵅⴭⴭ਍"
+						},
+						"description": "This interact posting to EU TPFICO Document API"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Interact to CM INfo  API DigiTexx",
+			"request": {
+				"url": "https://effektif-connector-qa-global.digi-texx.vn/ConnectorService.svc/json/Interact/ec1a42bf-90df-4dfa-9998-0a82bfd9084b/cmInfoAPI",
+				"method": "POST",
+				"header": [
+					{
+						"key": "authkey",
+						"value": "699f6095-7a8b-4741-9aa5-e976004cacbb",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"customer-name\": \"Sam Wong\",\r\n    \"id-card-no\": \"02/02/2019\",\r\n    \"application-id\": \"Test201912121250\",\r\n    \"document-ids\": [\"277910\",\"277911\",\"277912\",\"277913\"]\r\n}"
+				},
+				"description": "This interact posting to EU TPFICO Document API"
+			},
+			"response": []
+		},
+		{
+			"name": "Interact to resubmit comment  API DigiTexx",
+			"request": {
+				"url": "https://effektif-connector-qa-global.digi-texx.vn/ConnectorService.svc/json/Interact/ec1a42bf-90df-4dfa-9998-0a82bfd9084b/resubmitCommentAPI",
+				"method": "POST",
+				"header": [
+					{
+						"key": "authkey",
+						"value": "699f6095-7a8b-4741-9aa5-e976004cacbb",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n\t\"application-id\": \"APPL00108127\",\r\n\t\"comment-id\": \"5555345345\",\r\n\t\"comment\": \"wrong ID card\", \r\n\t\"documents\": [{\r\n            \"documentId\": \"278187\",\r\n            \"documentComment\": \"Đã up lại chứng minh nhân dân\"\r\n        }\r\n\t]\r\n}"
+				},
+				"description": "This interact posting to EU TPFICO Document API"
+			},
+			"response": []
+		},
+		{
+			"name": "Interact to Feedback  API DigiTexx",
+			"request": {
+				"url": "https://effektif-connector-qa-global.digi-texx.vn/ConnectorService.svc/json/Interact/ec1a42bf-90df-4dfa-9998-0a82bfd9084b/feedbackAPI",
+				"method": "POST",
+				"header": [
+					{
+						"key": "authkey",
+						"value": "699f6095-7a8b-4741-9aa5-e976004cacbb",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"application-id\": \"Test2019121123\",\r\n    \"status\": \"success\"\r\n}"
+				},
+				"description": "This interact posting to EU TPFICO Document API"
+			},
+			"response": []
+		}
+	]
+}
